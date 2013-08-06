@@ -9,5 +9,5 @@ Requirement:-
 angular js
 
 
-Mention percentage of scroll,on completion of it function will execute :)
+Mention percentage of scroll,on completion of percentage of scroll function will execute :)
 <a href="http://jsfiddle.net/U7Bz9/700/">Demo</a>
