@@ -1,6 +1,6 @@
 {
   "name": "angular-scroll-complete",
-  "main": "whenScrolled.js",
+  "main": "angular-scroll-complete.js",
   "version": "0.0.0",
   "homepage": "https://github.com/tushariscoolster/angular-scroll-complete",
   "authors": [

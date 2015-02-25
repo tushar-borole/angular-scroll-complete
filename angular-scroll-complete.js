@@ -4,17 +4,17 @@
 
 
 
-angular.module('whenScrolled', []).directive('whenScrolled', function () {
+angular.module('angular-scroll-complete', []).directive('whenScrolled', function () {
     return function (scope, elm, attr) {
         var raw = elm[0];
         var scrollCompleted = true;
         scope.$on('scollCompleted', function () {
-            scrollCompleted = true
+            scrollCompleted = true;
         });
         elm.bind('scroll', function () {
-            var remainingHeight = raw.offsetHeight - raw.scrollHeight
-            var scrollTop = raw.scrollTop
-            var percent = Math.abs((scrollTop / remainingHeight) * 100)
+            var remainingHeight = raw.offsetHeight - raw.scrollHeight;
+            var scrollTop = raw.scrollTop;
+            var percent = Math.abs((scrollTop / remainingHeight) * 100);
             if (percent > attr.percent) {
                 if (scrollCompleted) {
                     scope.$apply(attr.whenScrolled);
