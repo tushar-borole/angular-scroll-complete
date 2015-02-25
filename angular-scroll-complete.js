@@ -17,7 +17,6 @@ angular.module('angular-scroll-complete', []).directive('whenScrolled', function
             var scrollTop = raw.scrollTop;
             var percent = Math.abs((scrollTop / remainingHeight) * 100);
             if (percent > attr.percent) {
-              console.log(scrollCompleted)
                 if (scrollCompleted) {
                   scrollCompleted = false;
                     scope.$apply(attr.whenScrolled);
