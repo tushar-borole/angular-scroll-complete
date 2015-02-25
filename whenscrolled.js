@@ -1,13 +1,26 @@
-angular.module('scroll', []).directive('whenScrolled', function() {
-return function(scope, elm, attr) {
-var raw = elm[0];
-elm.bind('scroll', function() {
-var temp=raw.offsetHeight-raw.scrollHeight
-var temp2=raw.scrollTop
-var temp3=Math.abs((temp2/temp)*100)
-if (temp3>attr.percent) {
-scope.$apply(attr.whenScrolled);
-}
-});
-};
+/*@author Tushar Borole
+ * @description user has to jsut mention the percent, on completion of that percentage scroll; expression will be fired
+ * for example <div id="fixed" when-scrolled="loadMore()" percent="70">*/
+
+
+
+angular.module('whenScrolled', []).directive('whenScrolled', function () {
+    return function (scope, elm, attr) {
+        var raw = elm[0];
+        var scrollCompleted = true;
+        scope.$on('scollCompleted', function () {
+            scrollCompleted = true
+        });
+        elm.bind('scroll', function () {
+            var remainingHeight = raw.offsetHeight - raw.scrollHeight
+            var scrollTop = raw.scrollTop
+            var percent = Math.abs((scrollTop / remainingHeight) * 100)
+            if (percent > attr.percent) {
+                if (scrollCompleted) {
+                    scope.$apply(attr.whenScrolled);
+                    scrollCompleted = false;
+                }
+            }
+        });
+    };
 });

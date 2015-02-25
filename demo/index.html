@@ -3,19 +3,19 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>AngularJS: Infinite Scrolling </title>
-  
+
   <script type='text/javascript' src='/js/lib/dummy.js'></script>
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-  
-  
+
+
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  
-    
-    
+
+
+
       <script type='text/javascript' src="http://code.angularjs.org/1.0.0rc9/angular-1.0.0rc9.js"></script>
 
-    
-  
+
+
   <style type='text/css'>
     li {
   height: 120px;
@@ -28,24 +28,24 @@
 }
 
   </style>
-  
+
 </head>
 <body ng-app="scroll" ng-controller="Main">
   <div id="fixed" when-scrolled="loadMore()"percent="70">
 
   <ul>
     <li ng-repeat="i in items">{{i.id}}</li>
-  </ul>  
+  </ul>
 </div>
 
-  
 
 
-<script type='text/javascript'>//<![CDATA[ 
+
+<script type='text/javascript'>//<![CDATA[
 
 function Main($scope) {
     $scope.items = [];
-    
+
     var counter = 0;
     $scope.loadMore = function() {
         for (var i = 0; i < 5; i++) {
@@ -53,14 +53,14 @@ function Main($scope) {
             counter += 10;
         }
     };
-    
+
     $scope.loadMore();
 }
 
 angular.module('scroll', []).directive('whenScrolled', function() {
     return function(scope, elm, attr) {
         var raw = elm[0];
-        
+
         elm.bind('scroll', function() {
 
 var temp=raw.offsetHeight-raw.scrollHeight
@@ -74,7 +74,7 @@ var temp3=Math.abs((temp2/temp)*100)
     };
 });
 
-//]]>  
+//]]>
 
 </script>
 

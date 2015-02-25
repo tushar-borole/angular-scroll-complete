@@ -1,0 +1,14 @@
+# Git will not track these folders/files
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+docs
+test/coverage
+test/phantomjs-1.9.2-windows
+test/selenium
+desktop.ini
+
+# uncomment this if you make changes to Bootstrap 3 so that your changes persist through Git for the project
+#!app/bower_components/sass-bootstrap
