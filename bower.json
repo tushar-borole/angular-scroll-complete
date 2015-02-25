@@ -1,0 +1,18 @@
+{
+  "name": "whenScrolled",
+  "main": "whenScrolled.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tushariscoolster/whenScrolled",
+  "authors": [
+    "Tushar Borole <tushariscoolster@gmail.com>"
+  ],
+  "description": "Fire event on scroll",
+  "keywords": [
+    "whenScrolled",
+    "infineScroll",
+    "angularScroll",
+    "Scroll",
+    "Angular"
+  ],
+  "license": "MIT"
+}
