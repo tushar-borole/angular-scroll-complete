@@ -1,8 +1,8 @@
 {
-  "name": "whenScrolled",
+  "name": "angular-whenScrolled",
   "main": "whenScrolled.js",
   "version": "0.0.0",
-  "homepage": "https://github.com/tushariscoolster/whenScrolled",
+  "homepage": "https://github.com/tushariscoolster/angular-whenScrolled",
   "authors": [
     "Tushar Borole <tushariscoolster@gmail.com>"
   ],
@@ -12,7 +12,7 @@
     "infineScroll",
     "angularScroll",
     "Scroll",
-    "Angular"
+    "Angular","angular-whenScrolled"
   ],
   "license": "MIT"
 }
