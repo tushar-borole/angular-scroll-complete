@@ -8,7 +8,7 @@ angular.module('angular-scroll-complete', []).directive('whenScrolled', function
     return function (scope, elm, attr) {
         var raw = elm[0];
         var scrollCompleted = true;
-        scope.$on('scollCompleted', function () {
+        scope.$on('scrollCompleted', function () {
             scrollCompleted = true;
 
         });
