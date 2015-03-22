@@ -30,4 +30,4 @@ angular.module('myApplication', ['angular-scroll-complete']);
 ```<div id="fixed" when-scrolled="loadMore()" percent="70">```
 
 When scroll complete brodcast event to notify directive scroll is completed
-$scope.$broadcast('scrollCompleted');
+```$scope.$broadcast('scrollCompleted')```;
