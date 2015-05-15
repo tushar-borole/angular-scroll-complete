@@ -46,7 +46,7 @@ function Main($scope) {
             $scope.items.push({id: counter});
             counter += 10;
         }
-        $scope.$broadcast('scollCompleted'); // call is made to notify success of the hhtp call
+        $scope.$broadcast('scrollCompleted'); // call is made to notify success of the hhtp call
     };
 
     $scope.loadMore();
