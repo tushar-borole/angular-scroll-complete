@@ -40,8 +40,26 @@
     <div id="content-wrapper">
         <div class="inner clearfix">
             <section id="main-content">
-                
-               
+                <h2>About</h2>
+                <p>angular-scroll-complete is a directive for AngularJS to evaluate an expression when the bottom of the directive's element approaches the bottom of the scroll bar on percent completion, which can be used to implement infinite scrolling</p>
+
+                <h2>Getting Started</h2>
+                <p><strong>Bower</strong></p>
+                <pre>
+<code>bower install angular-scroll-complete </code>
+</pre>
+                <p>Ensure that your application module specifies angular-scroll-complete as a dependency:</p>
+                <pre>
+<code>angular.module('myApplication', ['angular-scroll-complete']); </code>
+</pre>
+                <p>Use the directive by specifying an when-scrolled attribute on an element.</p>
+                <pre>
+<code>when-scrolled="loadMore()" percent="70"</code>
+</pre>
+                <p>When scroll complete brodcast event to notify directive scroll is completed </p>
+                <pre>
+<code>$scope.$broadcast('scrollCompleted')</code>
+</pre>
                 <div class="overflow" when-scrolled="scrollComplete()" percent="{{percent}}">
                     <p>
                         In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.' In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'
@@ -49,12 +67,12 @@
                 </div>
                 <div style="float: right; width: 278px;">
                     Enter percentage here
-                     <input type="text" class="css-input" ng-model="percent" placeholder="percent">%
+                    <input type="text" class="css-input" ng-model="percent" placeholder="percent">%
                     <div> <a href="" ng-click="reset()" class="action-button shadow animate-btn red">Reset</a>
                     </div>
                     <br>
                     <div style="display: inline-block;" class="animated zoomIn" ng-if="scrolldone">Your function is triggred after {{percent}}% scroll complete
-                     
+
                     </div>
                 </div>
             </section>
