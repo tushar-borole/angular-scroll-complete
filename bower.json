@@ -1,0 +1,7 @@
+{
+  "name": "angular-scroll-complete-page",
+  "dependencies": {
+    "animate.css": "~3.3.0",
+    "jQuery": "~2.1.4"
+  }
+}
