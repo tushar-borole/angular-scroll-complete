@@ -3,7 +3,7 @@ angular-scroll-complete is a directive for [AngularJS](http://angularjs.org/) to
 Demos
 -----
 
-Check out the running demos http://htmlpreview.github.io/?https://raw.githubusercontent.com/tushariscoolster/angular-scroll-complete/master/demo/index.html.
+Check out the running demos http://tushariscoolster.github.io/moving-man/.
 
 
 
